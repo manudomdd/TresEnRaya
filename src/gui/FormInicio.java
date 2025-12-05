@@ -7,6 +7,8 @@ import javax.swing.border.Border;
 
 public class FormInicio extends javax.swing.JFrame {
     
+    //HAY QUE ARREGLAR LO DE LOS BORDER REDONDEADOS O QUITARLOS.
+    
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormInicio.class.getName());
 
     public FormInicio() {
