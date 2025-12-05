@@ -2,6 +2,7 @@ package gui;
 
 import java.awt.Color;
 import javax.swing.BorderFactory;
+import javax.swing.JPanel;
 import javax.swing.border.Border;
 
 public class FormInicio extends javax.swing.JFrame {
@@ -17,9 +18,15 @@ public class FormInicio extends javax.swing.JFrame {
         initComponents(); 
         this.setResizable(false);
         this.setLocationRelativeTo(null);
-        setBackground(new Color(0, 0, 0, 0));
+        
+        this.setBackground(new Color(0, 0, 0, 0));
+        
+        JPanel contentPane = (JPanel) this.getContentPane();
+        contentPane.setOpaque(false);
+        contentPane.setBackground(new Color(0, 0, 0, 0));
+        
+        panelFondo.setOpaque(false); 
         panelFondo.requestFocus();
-        panelFondo.setOpaque(false);
         
         Border border = BorderFactory.createLineBorder(new Color(243, 211, 246), 2); 
         panelBoton.setBorder(border);
@@ -263,21 +270,12 @@ public class FormInicio extends javax.swing.JFrame {
     }//GEN-LAST:event_lblIniciarMouseExited
       
     public static void main(String args[]) {
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
+        // Usar el estilo nativo del sistema (arregla las esquinas negras)
+            javax.swing.UIManager.setLookAndFeel(javax.swing.UIManager.getSystemLookAndFeelClassName());
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FormInicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
 
         java.awt.EventQueue.invokeLater(() -> new FormInicio().setVisible(true));
     }
