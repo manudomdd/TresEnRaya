@@ -1,5 +1,7 @@
 package gui;
 
+import dto.Jugador;
+import dto.TipoImagen;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.JPanel;
@@ -277,8 +279,26 @@ public class FormInicio extends javax.swing.JFrame {
     private void lblIniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarMouseClicked
         this.dispose();
         
-        FormTicTacToe juego = new FormTicTacToe(); 
+        Jugador jugador1 = new Jugador(TipoImagen.EQUIS); 
+        
+        if (txtJugador1.getText().equals("")) {
+            jugador1.setNombre("Jugador1");
+        } else {
+            jugador1.setNombre(txtJugador1.getText());
+        }
+        
+        Jugador jugador2 = new Jugador(TipoImagen.CIRCULO); 
+        
+        if (txtJugador2.getText().equals("")) {
+            jugador2.setNombre("Jugador2");
+        } else {
+            jugador2.setNombre(txtJugador2.getText());
+        }
+        
+        FormTicTacToe juego = new FormTicTacToe(jugador1, jugador2); 
         juego.setVisible(true); 
+        
+        
     }//GEN-LAST:event_lblIniciarMouseClicked
       
     public static void main(String args[]) {

@@ -1,13 +1,22 @@
 package gui;
 
+import dto.Jugador;
 import java.awt.Color;
 
 public class FormTicTacToe extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FormTicTacToe.class.getName());
-
-    public FormTicTacToe() {
+    private Jugador j1; 
+    private Jugador j2; 
+    
+    public FormTicTacToe(Jugador j1, Jugador j2) {
+        this.j1 = j1; 
+        this.j2 = j2; 
         init(); 
+    }
+
+    private FormTicTacToe() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
     public void init() {

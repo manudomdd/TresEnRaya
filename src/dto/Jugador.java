@@ -19,4 +19,20 @@ public class Jugador {
         this.nombre = nombre; 
         this.tipoImagen = tipoImagen; 
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public TipoImagen getTipoImagen() {
+        return tipoImagen;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setTipoImagen(TipoImagen tipoImagen) {
+        this.tipoImagen = tipoImagen;
+    }
 }

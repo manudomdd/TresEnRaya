@@ -15,4 +15,6 @@ public class Tablero {
     private Jugador jugador2; 
     
     
+    
+    
 }
