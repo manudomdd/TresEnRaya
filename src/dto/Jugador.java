@@ -5,39 +5,18 @@ import java.util.Objects;
 public class Jugador {
     
     private String nombre; 
+    private TipoImagen tipoImagen; 
     
-    public Jugador(String nombre) {
+    public Jugador() {
         
-    }  
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Jugador other = (Jugador) obj;
-        return Objects.equals(this.nombre, other.nombre);
     }
     
+    public Jugador(TipoImagen tipoImagen) {
+        this.tipoImagen = tipoImagen; 
+    }
     
+    public Jugador(String nombre, TipoImagen tipoImagen) {
+        this.nombre = nombre; 
+        this.tipoImagen = tipoImagen; 
+    }
 }
