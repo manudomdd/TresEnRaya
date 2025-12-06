@@ -39,7 +39,7 @@ public class FormInicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelFondo = new dto.PanelRedondeado();
+        panelFondo = new model.PanelRedondeado();
         lblCierre = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         txtJugador1 = new javax.swing.JTextField();
@@ -148,6 +148,9 @@ public class FormInicio extends javax.swing.JFrame {
         lblIniciar.setText("INICIAR");
         lblIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lblIniciar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblIniciarMouseClicked(evt);
+            }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 lblIniciarMouseEntered(evt);
             }
@@ -270,6 +273,13 @@ public class FormInicio extends javax.swing.JFrame {
         panelBoton.setBackground(new Color(42, 22, 79));
 
     }//GEN-LAST:event_lblIniciarMouseExited
+
+    private void lblIniciarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblIniciarMouseClicked
+        this.dispose();
+        
+        FormTicTacToe juego = new FormTicTacToe(); 
+        juego.setVisible(true); 
+    }//GEN-LAST:event_lblIniciarMouseClicked
       
     public static void main(String args[]) {
         try {
